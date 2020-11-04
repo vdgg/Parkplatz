@@ -42,6 +42,19 @@ public class ParkingLot {
         return freePlacesCount;
     }
 
+    public void decreaseFreePlaces() {
+        freePlacesCount -= 1;
+    }
+
+    public void increaseFreePlaces() {
+        freePlacesCount += 1;
+    }
+
+    public ParkingLot copy() {
+        return new ParkingLot(getName(), getLatitude(), getLongitude(), getPricePerHour(), getTotalPlacesCount(),
+                getFreePlacesCount());
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
